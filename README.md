@@ -1,70 +1,53 @@
-# Lab3_Search_and_knowledge_algorithms
+# 🧠 AI Lab 3 – Search Algorithms & Knowledge Base Reasoning
 
-🧠 AI Lab 3 – Search Algorithms & Knowledge Base Reasoning
-👤 Student Information
-Name: Ahmad Baabod
-ID: S22208053
+## 👤 Student Information
+- **Name:** Ahmad Baabod  
+- **ID:** S22208053  
 
+---
 
-📌 Overview
-
+## 📌 Overview
 This lab focuses on two main Artificial Intelligence concepts:
+1. **Search Algorithms** – specifically Breadth-First Search (BFS)
+2. **Knowledge Base Reasoning** – using logical inference
 
-Search Algorithms – specifically Breadth-First Search (BFS)
-Knowledge Base Reasoning – using logical inference to determine conclusions
-🚀 Part 1: Search Algorithms
-✅ Exercise 1 – BFS Search
-Goal: Find a path from Makkah to Madinah using BFS.
-Results:
-Steps taken: 5 steps
+---
 
-Path found:
+## 🚀 Part 1: Search Algorithms
 
-Makkah → Jeddah → Madinah
-Conclusion:
-Yes, this is the shortest path, as BFS guarantees the shortest path in an unweighted graph.
-➕ Exercise 2 – Adding a New City
-Task: Extend the graph by adding a new city and find a path.
-Results:
+### ✅ Exercise 1 – BFS Search
 
-New path from Makkah to Abha:
+**Goal:** Find a path from Makkah to Madinah using BFS.
 
-Makkah → Taif → Abha
-🧩 Part 2: Knowledge Base (KB)
-🕵️ Exercise 3 – Logical Inference
-Question:
+**Results:**
+- Steps taken: 5 steps  
+- Path found:  
+  `Makkah → Jeddah → Madinah`
 
-Does the Knowledge Base prove that Nora is guilty?
+**Conclusion:**  
+This is the **shortest path**, since BFS guarantees shortest paths in unweighted graphs.
 
-Answer:
-❌ No, because the KB does not include a rule connecting possession of the key to guilt.
-Required Addition:
+---
 
-To prove Nora is guilty, we must add the following rule:
+### ➕ Exercise 2 – Adding a New City
 
+**Task:** Extend the graph and find a new path.
+
+**Result:**
+- Path from Makkah to Abha:  
+  `Makkah → Taif → Abha`
+
+---
+
+## 🧩 Part 2: Knowledge Base (KB)
+
+### 🕵️ Exercise 3 – Logical Inference
+
+**Question:** Does the KB prove Nora is guilty?
+
+**Answer:**  
+No, because there is no rule linking having the key to being guilty.
+
+**Required rule:**
+```python
 kb.tell(Implication(nora_key, nora_guilty))
-🔍 Exercise 4 – Changing the KB
-Question:
-
-Is Lina still guilty after removing a clue?
-
-Answer:
-❌ No, Lina is no longer guilty.
-Explanation:
-Previously, Lina was considered guilty because:
-She was seen → she had the key → she was guilty.
-After removing the clue that she was seen:
-We can no longer prove she has the key.
-Therefore, she cannot be proven guilty.
-📚 Key Concepts Learned
-Breadth-First Search (BFS) guarantees shortest path in graphs.
-Graph traversal can model real-world navigation problems.
-Knowledge Bases rely on rules and facts.
-Small changes in logical rules can significantly affect conclusions.
-🛠️ Technologies Used
-Python
-Logic-based AI (Knowledge Base reasoning)
-📎 Notes
-Ensure all rules in a Knowledge Base are explicitly defined.
-Missing implications can prevent correct conclusions.
-Always verify search results against the graph/map.
